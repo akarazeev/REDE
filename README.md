@@ -30,3 +30,7 @@ And corresponding parameters of simulated models: (gap, width1, height, radius1,
 ```
 
 See [[main.ipynb](main.ipynb)] for more information.
+
+#### Contributors
+* Anton Lukashchuk &lt;[anton.lukashchuk@epfl.ch](mailto:anton.lukashchuk@epfl.ch)&gt;
+* Anton Karazeev &lt;[anton.karazeev@phystech.edu](mailto:anton.karazeev@phystech.edu)&gt;
