@@ -35,9 +35,9 @@ class REDE(data.Dataset):
             downloaded again.
     """
     urls = [
-        'https://github.com/akarazeev/REDE/raw/master/data/fem/raw/1056-5-parameters.pkl',
-        'https://github.com/akarazeev/REDE/raw/master/data/fem/raw/1056-62-111-images.pkl',
-        'https://github.com/akarazeev/REDE/raw/master/data/fem/raw/1056-x-frequencies_modes.pkl'
+        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/1056-5-parameters.pkl',
+        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/1056-62-111-images.pkl',
+        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/1056-x-frequencies_modes.pkl'
     ]
     raw_folder = 'raw'
     processed_folder = 'processed'
