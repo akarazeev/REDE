@@ -17,7 +17,7 @@ test_dataset = REDE('data/rede', train=False, download=True,
 
 #### Image samples from dataset
 
-![img1](img/img1.jpg)
+<img src='img/img1.jpg' width=600>
 
 And corresponding parameters of simulated models: (gap, width1, height, radius1, width2).
 ```
