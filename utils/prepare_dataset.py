@@ -1,5 +1,5 @@
 # File name: prepare_dataset.py
-# Author: Anton Karazeev <anton.karazeev@gmail.com>
+# Authors: Anton Karazeev <anton.karazeev@gmail.com>, Anton Lukashchuk <academik116@gmail.com>
 #
 # This file is part of REDE project (https://github.com/akarazeev/REDE)
 #
@@ -24,8 +24,15 @@ def preproc(freqs, modes):
     T0 = 282e12
     N = 20000
 
-    modes_total = np.linspace(min(modes), max(modes), N)
+    # Corrected here // AL 20.03
+    m1 = round(min(modes))
+    m2 = round(min(modes))
+    m_int = np.arange(m1, m2 + 1)
     tck = interpolate.CubicSpline(modes, freqs)
+    omega_int = tck(m_int)
+    #####
+
+    modes_total = np.linspace(min(modes), max(modes), N)
     omega_total = tck(modes_total)
 
     h = (max(modes) - min(modes)) / (N - 1)
@@ -36,7 +43,11 @@ def preproc(freqs, modes):
     modes_total = modes_total[:-1]
     omega_total = omega_total[:-1]
 
-    ind = np.argmin(abs(T0 - omega_total))
+    # Corrected here // AL 20.03
+    ind_int = np.argmin(abs(T0 - omega_int))
+    ind = np.argmin(abs(m_total - m_int[ind_int]))
+    #####
+
     w0 = omega_total[ind]
     m0 = modes_total[ind]
     D1 = D1_total[ind]
