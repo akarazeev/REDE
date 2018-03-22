@@ -83,6 +83,7 @@ class REDE(data.Dataset):
             tuple: (image, parameters) where parameter is a tuple of (gap,
                 width1, height, radius1, width2). E.g. (2.500000e-07, 0.000001,
                 7.000000e-07, 0.000018, 8.000000e-07)
+
         """
         if self.train:
             img, parameters = self.full_images[self.train_indices[index]], self.full_parameters[self.train_indices[index]]
@@ -118,6 +119,13 @@ class REDE(data.Dataset):
         # Make directories.
         try:
             os.makedirs(os.path.join(self.root, self.raw_folder))
+        except OSError as e:
+            if e.errno == errno.EEXIST:
+                pass
+            else:
+                raise
+
+        try:
             os.makedirs(os.path.join(self.root, self.processed_folder))
         except OSError as e:
             if e.errno == errno.EEXIST:
