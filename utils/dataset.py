@@ -33,11 +33,12 @@ class REDE(data.Dataset):
         download (bool, optional): If true, downloads the dataset from the internet and
             puts it in root directory. If dataset is already downloaded, it is not
             downloaded again.
+
     """
     urls = [
-        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/2904-5-parameters.pkl',
-        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/2904-62-111-images.pkl',
-        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/2904-frequencies_modes.pkl'
+        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/1848-5-parameters.pkl',
+        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/1848-62-111-images.pkl',
+        'https://github.com/akarazeev/REDE/raw/master/data/rede/raw/1848-frequencies_modes.pkl'
     ]
     raw_folder = 'raw'
     processed_folder = 'processed'
@@ -100,7 +101,6 @@ class REDE(data.Dataset):
         return img, parameters.type_as(torch.FloatTensor())
 
     def __len__(self):
-        # return len(self.full_images)
         if self.train:
             return len(self.train_indices)
         else:
@@ -146,9 +146,9 @@ class REDE(data.Dataset):
         print('Processing...')
 
         full_set = (
-            read_file(os.path.join(self.root, self.raw_folder, '2904-62-111-images.pkl')),
-            read_file(os.path.join(self.root, self.raw_folder, '2904-5-parameters.pkl'))
-            # read_file(os.path.join(self.root, self.raw_folder, '2904-frequencies_modes.pkl'))
+            read_file(os.path.join(self.root, self.raw_folder, '1848-62-111-images.pkl')),
+            read_file(os.path.join(self.root, self.raw_folder, '1848-5-parameters.pkl'))
+            # read_file(os.path.join(self.root, self.raw_folder, '1848-frequencies_modes.pkl'))
         )
         with open(os.path.join(self.root, self.processed_folder, self.full_file), 'wb') as f:
             torch.save(full_set, f)
