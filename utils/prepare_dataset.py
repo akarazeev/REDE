@@ -4,7 +4,7 @@
 # This file is part of REDE project (https://github.com/akarazeev/REDE)
 #
 # Description: content of this file was used to build a dataset
-# callsed REDE - Reverse Engineering in Dispersion Engineering.
+# called REDE - Reverse Engineering in Dispersion Engineering.
 # Files from utils/matlab_data/ were used as raw data. These data
 # contain information about system's simulations with given set of
 # parameters.
@@ -20,6 +20,19 @@ import scipy.io as spio
 
 
 def preproc(freqs, modes):
+    """Compute parameters for dispersion's plot.
+
+    Args:
+        freqs (list): Description of parameter `freqs`.
+        modes (list): Description of parameter `modes`.
+
+    Returns:
+        omega_total (type): Description of returned object.
+        delta_omega_total (type): Description of returned object.
+        D1_total (type): Description of returned object.
+        D2_total (type): Description of returned object.
+
+    """
     c = 2.99792458e8
     T0 = 282e12
     N = 20000
