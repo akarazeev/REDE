@@ -1,8 +1,8 @@
-### 💡 Reverse Engineering in Dispersion Engineering
+### Reverse Engineering in Dispersion Engineering
 
 Prediction of simulation parameters.
 
-#### [Down]loading REDE dataset
+#### Downloading REDE dataset
 
 ```python
 from utils.dataset import REDE
@@ -30,6 +30,12 @@ And corresponding parameters of simulated models: (gap, width1, height, radius1,
 ```
 
 See [[main.ipynb](main.ipynb)] for more information.
+
+#### Preprocessing of raw data
+
+<img src='img/img2.jpg' width=600>
+
+To get processed values you can visit [[dispersion_values.ipynb](utils/dispersion_values.ipynb)].
 
 #### Contributors
 * Anton Lukashchuk &lt;[anton.lukashchuk@epfl.ch](mailto:anton.lukashchuk@epfl.ch)&gt;
