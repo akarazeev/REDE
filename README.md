@@ -1,18 +1,44 @@
-### Reverse Engineering in Dispersion Engineering
+## Reverse Engineering in Dispersion Engineering
 
 Prediction of simulation parameters.
 
-#### Downloading REDE dataset
+### Description of the project
+
+We aim for advanced dispersion engineering design of microresonators to achieve broad (ideally octave-spanning) frequency combs. 
+
+Frequency comb is a array of equidistant spikes in frequency domain. Recently, FC were discovered in microresonators, where they can be generated due to the optical parametric oscillations, i.e four-wave mixing.
+
+<img src='img/combs.jpg' width=500>
+
+However, this nonlinear process requires high optical confinement of the light, so that non-linear processes can play a significant role, and an appropriate dispersion of the light modes in microresonator. The former can be obtained by increasing the Q-factor of the microresonator, while the latter one is a problem of dispersion engineering, where the geometry of the microresonator is designed in a special way to guide the light.
+
+<img src='img/disp.jpg' width=500>
+
+It appears that one of the key conditions for comb generation - is an anomalous dispersion (where the group velocity increases with increasing optical frequency, D2>0 (on the figures) ).
+
+The dispersion profile (Dint vs frequency) determines the spectrum of the comb one can achieve in microresonator.
+
+<img src='img/Dint_comb.jpg' width=500>
+
+
+
+### Some details regarding the code
+
+#### Downloading  dataset
 
 ```python
-from utils.dataset import REDE
-import torchvision.transforms as transforms
+import pickle
+## images data
+with open('data/rede/raw/5070-62-111-images.pkl', 'rb') as f:
+    img = pickle.load(f)
 
-train_dataset = REDE('data/rede', train=True, download=True,
-                     transform=torchvision.transforms.ToTensor())
-test_dataset = REDE('data/rede', train=False, download=True,
-                     transform=torchvision.transforms.ToTensor(),
-                     test_indices=train_dataset.test_indices)
+## vectors of Dispersion and frequency grid
+with open('data/rede/raw/5070-frequencies_modes.pkl', 'rb') as f:
+    Disp = pickle.load(f)    
+
+## Geometrical parameters
+with open('data/rede/raw/5070-5-parameters.pkl', 'rb') as f:
+    parameters_list = pickle.load(f)
 ```
 
 #### Image samples from dataset
@@ -40,3 +66,4 @@ To get processed values you can visit [[dispersion_values.ipynb](utils/dispersio
 #### Contributors
 * Anton Lukashchuk &lt;[anton.lukashchuk@epfl.ch](mailto:anton.lukashchuk@epfl.ch)&gt;
 * Anton Karazeev &lt;[anton.karazeev@phystech.edu](mailto:anton.karazeev@phystech.edu)&gt;
+* Maxim Karpov &lt;[maxim.karpov@epfl.ch](mailto:maxim.karpov@epfl.ch)&gt;
