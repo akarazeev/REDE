@@ -82,6 +82,47 @@ To get processed data you can visit [[prepare_dataset_keras.ipynb](utils/prepare
 * Third, we combined 2 networks. 
 <img src='img/double-net.png'>
 
+### Results
+*PaboTaET }{yEBo*
+
+1st NN performed best, with mse = 0.25;
+Here are shown geometrical parameters(normalized) of test data, and ones predicted by NN.
+```python
+y_test[a]
+
+array([[ 3.5 , 14.5 ,  7.5 ,  2.4 ,  8.  ],
+       [ 3.  , 15.5 ,  7.6 ,  1.65,  9.6 ],
+       [ 2.5 , 15.5 ,  6.4 ,  1.55,  9.6 ],
+       [ 3.5 , 15.5 ,  8.  ,  2.2 ,  8.  ],
+       [ 3.  , 15.5 ,  7.2 ,  1.55,  8.4 ],
+       [ 3.5 , 15.5 ,  6.8 ,  1.55,  9.6 ],
+       [ 3.  , 15.5 ,  8.5 ,  1.8 , 10.  ],
+       [ 4.  , 15.  ,  6.  ,  1.75,  7.6 ],
+       [ 2.5 , 14.5 ,  7.  ,  2.4 ,  8.4 ],
+       [ 4.  , 14.5 ,  8.5 ,  1.9 , 10.  ]])
+       
+model.predict(X_test)[a]       
+
+array([[ 3.3143342, 14.9358635,  7.576552 ,  1.9447037,  8.548236 ],
+       [ 2.9594233, 14.9880295,  7.8288393,  1.9011168,  9.482163 ],
+       [ 3.1460183, 15.228081 ,  7.058155 ,  1.9260627,  9.692702 ],
+       [ 3.4182646, 15.498358 ,  7.0852118,  1.9343007,  8.853269 ],
+       [ 3.3239105, 15.008889 ,  7.32713  ,  1.9090928,  8.689564 ],
+       [ 3.0878284, 15.083664 ,  7.5174565,  1.9432529,  9.540515 ],
+       [ 3.3618717, 15.127085 ,  8.252455 ,  1.8655368,  9.490334 ],
+       [ 3.4425998, 15.472049 ,  7.1377964,  1.9095007,  8.77194  ],
+       [ 3.243337 , 15.221086 ,  7.312777 ,  2.0029273,  8.727796 ],
+       [ 2.924205 , 14.94679  ,  8.190481 ,  1.8111858,  9.131056 ]],
+      dtype=float32)
+```
+
+Thus, we conclude that the perfomance of NN is not perfect.
+
+Now, we check the perfomance of the NN asking it to predict geometrical parameters of the curve that was not in the dataset. And simulate those parameters.
+
+<img src='img/result1.png'>
+
+There is something in that!
 
 ### Contributors
 * Anton Lukashchuk &lt;[anton.lukashchuk@epfl.ch](mailto:anton.lukashchuk@epfl.ch)&gt;
