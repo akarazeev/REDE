@@ -40,8 +40,6 @@ One might think about optimization problem, where it is possible to assign kind 
 
 ### Some details regarding the code
 
-
-
 #### Downloading  dataset
 
 ```python
@@ -59,27 +57,15 @@ with open('data/rede/raw/5070-5-parameters.pkl', 'rb') as f:
     parameters_list = pickle.load(f)
 ```
 
-#### Image samples from dataset
-
-<img src='img/img1.jpg' width=600>
-
-And corresponding parameters of simulated models: (gap, width1, height, radius1, width2).
-```
-1.00000e-05 *
-  0.0250  0.1550  0.0850  2.2000  0.0880
-  0.0300  0.1450  0.0700  2.0000  0.0920
-  0.0250  0.1550  0.0700  2.2000  0.0920
-  0.0350  0.1500  0.0750  2.0000  0.1000
-[torch.FloatTensor of size 4x5]
-```
-
-See [[main.ipynb](main.ipynb)] for more information.
-
 #### Preprocessing of raw data
 
-<img src='img/img2.jpg' width=600>
+<img src='img/img2.jpg' width=500>
 
-To get processed values you can visit [[dispersion_values.ipynb](utils/dispersion_values.ipynb)].
+<img src='img/preproc_dint.png'>
+
+To get processed data you can visit [[prepare_dataset_keras.ipynb](utils/prepare_dataset_keras.ipynb)].
+
+
 
 #### Contributors
 * Anton Lukashchuk &lt;[anton.lukashchuk@epfl.ch](mailto:anton.lukashchuk@epfl.ch)&gt;
