@@ -6,7 +6,7 @@ Prediction of simulation parameters.
 
 We aim for advanced dispersion engineering design of microresonators to achieve broad (ideally octave-spanning) frequency combs. 
 
-Frequency comb is a array of equidistant spikes in frequency domain. Recently, FC were discovered in microresonators, where they can be generated due to the optical parametric oscillations, i.e four-wave mixing.
+Frequency comb is an array of equidistant spikes in frequency domain. Recently, FC were discovered in microresonators, where they can be generated due to the optical parametric oscillations, i.e four-wave mixing.
 
 <img src='img/combs.jpg' width=600>
 
@@ -14,7 +14,7 @@ However, this nonlinear process requires high optical confinement of the light, 
 
 <img src='img/disp.jpg' width=600>
 
-It appears that one of the key conditions for comb generation - is an anomalous dispersion (where the group velocity increases with increasing optical frequency, D2>0 (on the figures) ).
+It appears that one of the key conditions for comb generation - is an anomalous dispersion (where the distance between two consecutive resonances of the resonator increases with increasing optical frequency, D2>0 (on the figures) ).
 
 The dispersion profile (Dint vs frequency) determines the spectrum of the comb one can achieve in microresonator.
 
@@ -24,6 +24,9 @@ Conventional way to engineer dispersion is to play with geometrical parameters o
 
 <img src='img/conv_disp_eng.jpg' width=400>
 
+Generally, we want Dint (see figure above) to be slightly > 0 and very broad, thus the comb is flat and broad.
+
+However, this is already well established technique, which has already met its limit. New approaches has been proposed: combining several resonators to locally induce anomalous/normal dispersion thus extending overall Dint profile (see for example: [[Dispersion engineering and frequency comb generation in thin silicon nitride concentric microresonators](https://www.nature.com/articles/s41467-017-00491-x)]). This happens due to the mode hybridization between two resonators at a given range of frequincie, where one can effect the dispersion.
 
 ### Some details regarding the code
 
