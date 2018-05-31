@@ -1,6 +1,6 @@
 ## Reverse Engineering in Dispersion Engineering
 
-Prediction of simulation parameters.
+Prediction of geometrical parameters given a dispersion curve. 
 
 ### Description of the project
 
@@ -22,13 +22,19 @@ The dispersion profile (Dint vs frequency) determines the spectrum of the comb o
 
 Conventional way to engineer dispersion is to play with geometrical parameters of the single waveguide.
 
-<img src='img/conv_disp_eng.jpg' width=400>
+<img src='img/conv_disp_eng.jpg' width=500>
 
 Generally, we want Dint (see figure above) to be slightly > 0 and very broad, thus the comb is flat and broad.
 
-However, this is already well established technique, which has already met its limit. New approaches has been proposed: combining several resonators to locally induce anomalous/normal dispersion thus extending overall Dint profile (see for example: [[Dispersion engineering and frequency comb generation in thin silicon nitride concentric microresonators](https://www.nature.com/articles/s41467-017-00491-x)]). This happens due to the mode hybridization between two resonators at a given range of frequincie, where one can effect the dispersion.
+However, this is already well established technique, which has already met its limit. New approaches has been proposed: combining several resonators to locally induce anomalous/normal dispersion thus extending overall Dint profile (see for example: [[Dispersion engineering and frequency comb generation in thin silicon nitride concentric microresonators](https://www.nature.com/articles/s41467-017-00491-x)]). This happens due to the mode hybridization between two resonators at a given range of frequincie, where one can effect the dispersion. 
+
+Generally, to predict dispersion profile, one usually simulates distribution of eigenmodes in microresonator, which is done by solving system of Maxwell equations in commercial softwear like COMSOL or ANSYS (via Finite Elements Method). Combining two resonators already becomes hard problem as the number of geometrical parametters increases. Now one has: widths of 2 resonators, heights, gap distance and radius. One round of simulations takes about 10 min for quite sparse array of frrequencies taken to calculate modes at (we calculate modes in range from 180THz up to 380THz each 10Thz), (8 CPUs and many RAM).
+
+Here one might think to apply some fancy algorithms to be able to predict parameters of the system, given the known dispersion curve. Our idea is to feed a Neural Network with simulated batch of data, so it is later able to map dispersion curve that we draw to real parameters of the microresonator.
 
 ### Some details regarding the code
+
+
 
 #### Downloading  dataset
 
