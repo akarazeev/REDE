@@ -118,7 +118,7 @@ array([[ 3.3143342, 14.9358635,  7.576552 ,  1.9447037,  8.548236 ],
 
 Thus, we conclude that the perfomance of NN is not perfect.
 
-Now, we check the perfomance of the NN asking it to predict geometrical parameters of the curve that was not in the dataset. And simulate those parameters.
+Now, we check the perfomance of the NN asking it to predict geometrical parameters of the curve that was not in the dataset. Further we simulate those parameters in COMSOL and compare 2 results for dispersion.
 
 <img src='img/result1.png'>
 
