@@ -36,7 +36,11 @@ Generally, to predict dispersion profile, one usually simulates distribution of 
 
 Here one might think to apply some fancy algorithms to be able to predict parameters of the system, given the known dispersion curve. Our idea is to feed a Neural Network with simulated batch of data, so it is later able to map dispersion curve that we draw to real parameters of the microresonator.
 
-One might think about optimization problem, where it is possible to assign kind off score of each dispersion curve based on its width and slight positive deviations from zero, or even multiple zero-crossings ([[which leads to dispersive waves](http://science.sciencemag.org/content/351/6271/357)]) and try to optimize it. But here we focus on a Neural Network implementation, eventhough it might be not optimal way to solve this sort of problem.
+Acquiring the data was the toughest challenge. One can estimate, that 10 mins/sample turns to be around 140 samples per day. Due to the license restrictions it is possible to use the softwear on one computer only. Also there is a tradeoff between quality of the data and quantity of the samples. Trying to get about **6000** samples we simulated quite sparse dispersion array which results in low precesion.
+
+One might think about optimization problem, where it is possible to assign kind off score of each dispersion curve based on its width and slight positive deviations from zero, or even multiple zero-crossings ([[which leads to dispersive waves](http://science.sciencemag.org/content/351/6271/357)]) and try to optimize it (where generative algorithms might be useful). But here we focus on a Neural Network implementation, eventhough it might be not optimal way to solve this sort of problem.
+
+As an input for the network we use dispersion data and for the output - geometrical parameters, corresponding to this curve.
 
 ### Some details regarding the code
 
@@ -64,10 +68,22 @@ with open('data/rede/raw/5070-5-parameters.pkl', 'rb') as f:
 <img src='img/preproc_dint.png'>
 
 To get processed data you can visit [[prepare_dataset_keras.ipynb](utils/prepare_dataset_keras.ipynb)].
+(These 2 pictures correspond to differnt parameters).
+
+#### NN implementation, visit [[prepare_dataset_keras.ipynb](utils/prepare_dataset_keras.ipynb)]
+* First, we feed our network with one-dimensional vectors of Dint corresponding to given frequencies (same for the whole vectors)
+<img src='img/basic-net.png'>
 
 
+* Second, we implemented convolutional NN, where it is fed with images. 
+<img src='img/conv-net.png'>
 
-#### Contributors
+
+* Third, we combined 2 networks. 
+<img src='img/double-net.png'>
+
+
+### Contributors
 * Anton Lukashchuk &lt;[anton.lukashchuk@epfl.ch](mailto:anton.lukashchuk@epfl.ch)&gt;
 * Anton Karazeev &lt;[anton.karazeev@phystech.edu](mailto:anton.karazeev@phystech.edu)&gt;
 * Maxim Karpov &lt;[maxim.karpov@epfl.ch](mailto:maxim.karpov@epfl.ch)&gt;
