@@ -8,18 +8,21 @@ We aim for advanced dispersion engineering design of microresonators to achieve 
 
 Frequency comb is a array of equidistant spikes in frequency domain. Recently, FC were discovered in microresonators, where they can be generated due to the optical parametric oscillations, i.e four-wave mixing.
 
-<img src='img/combs.jpg' width=500>
+<img src='img/combs.jpg' width=600>
 
 However, this nonlinear process requires high optical confinement of the light, so that non-linear processes can play a significant role, and an appropriate dispersion of the light modes in microresonator. The former can be obtained by increasing the Q-factor of the microresonator, while the latter one is a problem of dispersion engineering, where the geometry of the microresonator is designed in a special way to guide the light.
 
-<img src='img/disp.jpg' width=500>
+<img src='img/disp.jpg' width=600>
 
 It appears that one of the key conditions for comb generation - is an anomalous dispersion (where the group velocity increases with increasing optical frequency, D2>0 (on the figures) ).
 
 The dispersion profile (Dint vs frequency) determines the spectrum of the comb one can achieve in microresonator.
 
-<img src='img/Dint_comb.jpg' width=500>
+<img src='img/Dint_comb.jpg' width=400>
 
+Conventional way to engineer dispersion is to play with geometrical parameters of the single waveguide.
+
+<img src='img/conv_disp.jpg' width=400>
 
 
 ### Some details regarding the code
