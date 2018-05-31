@@ -22,7 +22,7 @@ The dispersion profile (Dint vs frequency) determines the spectrum of the comb o
 
 Conventional way to engineer dispersion is to play with geometrical parameters of the single waveguide.
 
-<img src='img/conv_disp.jpg' width=400>
+<img src='img/conv_disp_eng.jpg' width=400>
 
 
 ### Some details regarding the code
