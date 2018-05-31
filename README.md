@@ -70,7 +70,7 @@ with open('data/rede/raw/5070-5-parameters.pkl', 'rb') as f:
 To get processed data you can visit [[prepare_dataset_keras.ipynb](utils/prepare_dataset_keras.ipynb)].
 (These 2 pictures correspond to differnt parameters).
 
-#### NN implementation, visit [[prepare_dataset_keras.ipynb](utils/prepare_dataset_keras.ipynb)]
+#### NN implementation, visit [[main_keras_realization.ipynb](main_keras_realization.ipynb)]
 * First, we feed our network with one-dimensional vectors of Dint corresponding to given frequencies (same for the whole vectors)
 <img src='img/basic-net.png'>
 
