@@ -28,7 +28,7 @@ Conventional way to engineer dispersion is to play with geometrical parameters o
 
 However, this is already well established technique, which has already met its limit. New approaches has been proposed: combining several resonators to locally induce anomalous/normal dispersion thus extending overall Dint profile (see for example: [[Dispersion engineering and frequency comb generation in thin silicon nitride concentric microresonators](https://www.nature.com/articles/s41467-017-00491-x)]). This happens due to the mode hybridization between two resonators at a given range of frequincie, where one can effect the dispersion. 
 
-<img src='img/disp_adv_eng.jpg' width=500>
+<img src='img/disp_adv_eng.jpg' width=600>
 
 On the figure above one can observe extension of the Dint (Mode deviation) profile, due to locally induced anomalous dispersion (around 220THz). For the red curve comb would vast until until 230 THz on the low frequency side, while for hybridized mode it would go 190 THz. For high frequencies red and blue curves are almost the same. 
 
@@ -36,7 +36,7 @@ Generally, to predict dispersion profile, one usually simulates distribution of 
 
 Here one might think to apply some fancy algorithms to be able to predict parameters of the system, given the known dispersion curve. Our idea is to feed a Neural Network with simulated batch of data, so it is later able to map dispersion curve that we draw to real parameters of the microresonator.
 
-One might think about optimization problem, where it is possible to assign kind off score of each dispersion curve based on its width and slight positive deviations from zero, or even multiple zero-crossings ([[which leads to dispersive waves] (http://science.sciencemag.org/content/351/6271/357)]) and try to optimize it. But here we focus on a Neural Network implementation, eventhough it might be not optimal way to solve this sort of problem.
+One might think about optimization problem, where it is possible to assign kind off score of each dispersion curve based on its width and slight positive deviations from zero, or even multiple zero-crossings ([[which leads to dispersive waves](http://science.sciencemag.org/content/351/6271/357)]) and try to optimize it. But here we focus on a Neural Network implementation, eventhough it might be not optimal way to solve this sort of problem.
 
 ### Some details regarding the code
 
