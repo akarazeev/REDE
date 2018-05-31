@@ -36,7 +36,7 @@ Generally, to predict dispersion profile, one usually simulates distribution of 
 
 Here one might think to apply some fancy algorithms to be able to predict parameters of the system, given the known dispersion curve. Our idea is to feed a Neural Network with simulated batch of data, so it is later able to map dispersion curve that we draw to real parameters of the microresonator.
 
-One might think about optimization problem, where it is possible to assign kind off score of each dispersion curve based on its width and slight positive deviations from zero, or even multiple zero-crossings [[which leads to dispersive waves] (http://science.sciencemag.org/content/351/6271/357)] and try to optimize it. But here we focus on a Neural Network implementation, eventhough it might be not optimal way to solve this sort of problem.
+One might think about optimization problem, where it is possible to assign kind off score of each dispersion curve based on its width and slight positive deviations from zero, or even multiple zero-crossings ([[which leads to dispersive waves](http://science.sciencemag.org/content/351/6271/357)]) and try to optimize it. But here we focus on a Neural Network implementation, eventhough it might be not optimal way to solve this sort of problem.
 
 ### Some details regarding the code
 
