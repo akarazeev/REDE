@@ -20,7 +20,7 @@ The dispersion profile (Dint vs frequency) determines the spectrum of the comb o
 
 <img src='img/Dint_comb.jpg' width=400>
 
-Generally, we want Dint (see figure above) to be slightly > 0 and very broad, thus the comb is flat and broad. If |Dint| is significantly nore than 0, which means that the mode is far from the corresponding microresonator resonance, the comb substantially decays.
+Generally, we want Dint (see figure above) to be slightly > 0 and very broad, thus the comb is flat and broad. If |Dint| is significantly more than 0, which means that the mode is far from the corresponding microresonator resonance, the comb substantially decays (see the figure above for example).
 
 Conventional way to engineer dispersion is to play with geometrical parameters of the single waveguide.
 
@@ -36,7 +36,7 @@ Generally, to predict dispersion profile, one usually simulates distribution of 
 
 Here one might think to apply some fancy algorithms to be able to predict parameters of the system, given the known dispersion curve. Our idea is to feed a Neural Network with simulated batch of data, so it is later able to map dispersion curve that we draw to real parameters of the microresonator.
 
-Acquiring the data was the toughest challenge. One can estimate, that 10 mins/sample turns to be around 140 samples per day. Due to the license restrictions it is possible to use the softwear on one computer only. Also there is a tradeoff between quality of the data and quantity of the samples. Trying to get about **6000** samples we simulated quite sparse dispersion array which results in low precesion.
+Acquiring the data was the toughest challenge. One can estimate, that 10 mins/sample turns to be around 140 samples per day. Due to the license restrictions it is possible to use the softwear on one computer only. Also there is a tradeoff between quality of the data and quantity of the samples. Trying to get about **6000** samples we simulated quite sparse dispersion array which results in low precision.
 
 One might think about optimization problem, where it is possible to assign kind off score of each dispersion curve based on its width and slight positive deviations from zero, or even multiple zero-crossings ([[which leads to dispersive waves](http://science.sciencemag.org/content/351/6271/357)]) and try to optimize it (where generative algorithms might be useful). But here we focus on a Neural Network implementation, eventhough it might be not optimal way to solve this sort of problem.
 
