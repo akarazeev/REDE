@@ -124,6 +124,21 @@ Now, we check the perfomance of the NN asking it to predict geometrical paramete
 
 There is something in that!
 
+Now for predicted geonetrical parameters:
+```python
+array([[ 3.6425095, 15.237562 ,  7.285256 ,  2.1243105,  9.59958  ]],
+      dtype=float32)
+```
+We find the sample in the dataset with likewise geometrical parameters:
+```python
+[3.5e-07 1.5e-06 7.5e-07 2.2e-05 9.6e-07]
+```
+And plot it (red curve):
+
+<img src='img/result2.png'>
+
+Apparently, NN predicted geometrical parameters for blue curve (which was not in dataset for sure) similar to red one (evethough there still is difference). One could explain it as right parts of those curves almost correspond and NN found out that!
+
 ### Contributors
 * Anton Lukashchuk &lt;[anton.lukashchuk@epfl.ch](mailto:anton.lukashchuk@epfl.ch)&gt;
 * Anton Karazeev &lt;[anton.karazeev@phystech.edu](mailto:anton.karazeev@phystech.edu)&gt;
