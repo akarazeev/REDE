@@ -28,11 +28,11 @@ Conventional way to engineer dispersion is to play with geometrical parameters o
 
 However, this is already well established technique, which has already met its limit. New approaches has been proposed: combining several resonators to locally induce anomalous/normal dispersion thus extending overall Dint profile (see for example: [[Dispersion engineering and frequency comb generation in thin silicon nitride concentric microresonators](https://www.nature.com/articles/s41467-017-00491-x)]). 
 
-<img src='img/adv_resonators.jpg' width=600>
+<img src='img/p.png' width=600>
 
 Figure demonstates conventional (a) and advanced (b) resonator geometries.
 
-The extension happens due to the mode hybridization between two resonators at a given range of frequencies, where one can effect the dispersion. 
+The extension happens due to the mode hybridization between two resonators at a given range of frequencies, where one can effect the dispersion. The figure below represents the example of dispersion engineering with 2 concentric resonators. Red and pink Dint profiles correspond to resonators alone (when only one of them exists and is measured), while the blue profile refers to hybridised mode which exists only in the system of two resonators and propagates simultaneously in both of them.
 
 <img src='img/disp_adv_eng.jpg' width=600>
 
