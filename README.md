@@ -8,7 +8,7 @@ We aim for advanced dispersion engineering design of microresonators to achieve 
 
 Frequency comb is an array of equidistant spikes in frequency domain. Recently, FC were discovered in microresonators, where they can be generated due to the optical parametric oscillations, i.e four-wave mixing.
 
-<img src='img/combs.jpg' width=600>
+<img src='img/simple resonator.jpg' width=600>
 
 However, this nonlinear process requires high optical confinement of the light, so that non-linear processes can play a significant role, and an appropriate dispersion of the light modes in microresonator. The former can be obtained by increasing the Q-factor of the microresonator, while the latter one is a problem of dispersion engineering, where the geometry of the microresonator is designed in a special way to guide the light.
 
@@ -26,7 +26,13 @@ Conventional way to engineer dispersion is to play with geometrical parameters o
 
 <img src='img/conv_disp_eng.jpg' width=500>
 
-However, this is already well established technique, which has already met its limit. New approaches has been proposed: combining several resonators to locally induce anomalous/normal dispersion thus extending overall Dint profile (see for example: [[Dispersion engineering and frequency comb generation in thin silicon nitride concentric microresonators](https://www.nature.com/articles/s41467-017-00491-x)]). This happens due to the mode hybridization between two resonators at a given range of frequincie, where one can effect the dispersion. 
+However, this is already well established technique, which has already met its limit. New approaches has been proposed: combining several resonators to locally induce anomalous/normal dispersion thus extending overall Dint profile (see for example: [[Dispersion engineering and frequency comb generation in thin silicon nitride concentric microresonators](https://www.nature.com/articles/s41467-017-00491-x)]). 
+
+<img src='img/dadv_resonators.jpg' width=600>
+
+Figure demonstates conventional (a) and advanced (b) resonator geometries.
+
+The extension happens due to the mode hybridization between two resonators at a given range of frequencies, where one can effect the dispersion. 
 
 <img src='img/disp_adv_eng.jpg' width=600>
 
